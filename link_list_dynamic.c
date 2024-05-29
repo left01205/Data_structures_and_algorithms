@@ -6,7 +6,15 @@ struct node
     int info;
     struct node *link;
 };
-
+void print_node(struct node *n) 
+{
+    while(n != NULL) 
+    {
+        printf("%d ", n->info);
+        n = n->link;
+    }
+        printf("\n");
+    }
 int main() 
 {
     int n;
@@ -35,17 +43,6 @@ int main()
             p->link = temp;
         }
     }
-
-    void print_node(struct node *n) 
-    {
-        while(n != NULL) 
-        {
-            printf("%d ", n->info);
-            n = n->link;
-        }
-        printf("\n");
-    }
-
     print_node(head);
 
     return 0;
