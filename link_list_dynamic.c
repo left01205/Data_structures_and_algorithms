@@ -6,7 +6,7 @@ struct node
     int info;
     struct node *link;
 };
-void print_node(struct node *n) 
+void traverse(struct node *n) 
 {
     while(n != NULL) 
     {
@@ -43,7 +43,7 @@ int main()
             p->link = temp;
         }
     }
-    print_node(head);
+    traverse(head);
 
     return 0;
 }
