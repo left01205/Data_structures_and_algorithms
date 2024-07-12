@@ -7,7 +7,8 @@ void merge(int arr[], int left, int mid, int right) {
     int n2 = right - mid;
 
     // Create temporary arrays
-    int L[n1], R[n2];
+    int *L = (int *)malloc(n1 * sizeof(int));
+    int *R = (int *)malloc(n2 * sizeof(int));
 
     // Copy data to temporary arrays L[] and R[]
     for (i = 0; i < n1; i++)
